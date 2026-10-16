@@ -1,0 +1,55 @@
+{
+  "name": "error-radar",
+  "displayName": "Error Radar",
+  "description": "Visual diagnostics dashboard and adaptive editor accents",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.140.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "error-radar.checkDiagnostics",
+        "title": "Error Radar: Check Diagnostics"
+      },
+      {
+        "command": "error-radar.openDiagnostic",
+        "title": "Error Radar: Open Diagnostic"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "errorRadar.diagnostics",
+          "name": "Diagnostics"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.140.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "eslint": "^10.5.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
